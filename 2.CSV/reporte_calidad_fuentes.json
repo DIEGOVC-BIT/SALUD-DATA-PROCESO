@@ -1,0 +1,103 @@
+{
+  "aviso": "Este reporte se calcula con los dos archivos originales adjuntados. No sustituye la validación posterior en SQL Server.",
+  "fuentes": {
+    "sis": {
+      "archivo": "OPENDATA_DS_01_020_ATENCIONES.xlsx",
+      "sha256": "828ce266a34ef079d2d8d6dc7939ffb4f35fefb589dc7bba968a7b4e0ddc437d",
+      "filas_leidas_antes_filtro": 140,
+      "region_filtro": "LA LIBERTAD",
+      "filas_validas_exportadas": 140,
+      "filas_rechazadas": 0,
+      "duplicados_exactos": 0,
+      "total_atenciones": 1098,
+      "valores_vacios_por_columna": {
+        "ANO": 0,
+        "MES": 0,
+        "REGION": 0,
+        "PROVINCIA": 0,
+        "UBIGEO_DISTRITO": 0,
+        "DISTRITO": 0,
+        "COD_UNIDAD_EJECUTORA": 0,
+        "DESC_UNIDAD_EJECUTORA": 0,
+        "COD_IPRESS": 0,
+        "IPRESS": 0,
+        "NIVEL_EESS": 0,
+        "PLAN_DE_SEGURO": 0,
+        "COD_SERVICIO": 0,
+        "DESC_SERVICIO": 0,
+        "SEXO": 0,
+        "GRUPO_EDAD": 0,
+        "ATENCIONES": 0
+      },
+      "distribucion_provincia": {
+        "PATAZ": 78,
+        "SÁNCHEZ CARRIÓN": 62
+      },
+      "distribucion_ano": {
+        "2020": 140
+      },
+      "distribucion_mes": {
+        "9": 140
+      }
+    },
+    "minsa_ipress": {
+      "archivo": "IPRESS.csv",
+      "sha256": "c1d7bd31241ebcae37d5fc916754a68b91aec991c09065b3c33656675736a2e2",
+      "filas_leidas": 20819,
+      "filas_validas_exportadas": 20793,
+      "filas_rechazadas": 0,
+      "filas_duplicadas_eliminadas": 26,
+      "codigos_unicos_duplicados_antes_deduplicar": 26,
+      "codigos_con_coordenadas_conflictivas": 1,
+      "departamentos_distintos": 25,
+      "registros_departamento_la_libertad": 677,
+      "valores_vacios_por_columna": {
+        "INSTITUCION": 0,
+        "CODIGO_UNICO": 0,
+        "NOMBRE_ESTABLECIMIENTO": 0,
+        "CLASIFICACION": 10,
+        "TIPO": 0,
+        "DEPARTAMENTO": 0,
+        "PROVINCIA": 0,
+        "DISTRITO": 0,
+        "UBIGEO": 0,
+        "DIRECCION": 0,
+        "CODIGO_DISA": 0,
+        "CODIGO_RED": 0,
+        "CODIGO_MICRORRED": 0,
+        "DISA": 0,
+        "RED": 11887,
+        "MICRORRED": 957,
+        "CODIGO_UE": 0,
+        "UNIDAD_EJECUTORA": 12723,
+        "CATEGORIA": 0,
+        "TELEFONO": 538,
+        "TIPO_DOC_CATEGORIZACION": 0,
+        "NRO_DOC_CATEGORIZACION": 12050,
+        "HORARIO": 2,
+        "INICIO_ACTIVIDAD": 0,
+        "DIRECTOR_RESPONSABLE": 33,
+        "ESTADO": 0,
+        "SITUACION": 20793,
+        "CONDICION": 0,
+        "INSPECCION": 20793,
+        "NORTE": 12839,
+        "ESTE": 12839,
+        "COTA": 13351,
+        "CAMAS": 20166
+      }
+    }
+  },
+  "cruce_sis_ipress": {
+    "codigos_ipress_distintos_en_sis": 18,
+    "codigos_en_comun": 18,
+    "codigos_sis_sin_coincidencia": 0,
+    "porcentaje_coincidencia": 100.0
+  },
+  "salidas": [
+    "SIS_ATENCIONES_SQL.csv",
+    "MINSA_IPRESS_SQL.csv",
+    "MINSA_IPRESS_DUPLICADOS_REVISAR.csv (si existen duplicados)",
+    "reporte_calidad_fuentes.json"
+  ]
+}
