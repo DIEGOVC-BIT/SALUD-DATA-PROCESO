@@ -1,0 +1,6 @@
+Tablas de carga: stg.SIS_ATENCIONES_RAW, stg.MINSA_IPRESS_RAW.
+Tablas de consulta: dbo.ATENCIONES_SIS_OFICIAL, ref.IPRESS_MINSA.
+Procesos y control: procedimientos ds, auditoria ds y roles de lectura/escritura separados.
+Analitica: esquema bi con dimensiones, tabla de hechos y conciliacion de totales.
+Precaucion: la tabla de hechos registra agregados de atenciones, no pacientes individuales.
+Precaucion: no actualizar ni borrar las fuentes originales.
